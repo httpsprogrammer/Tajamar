@@ -1,11 +1,14 @@
+@import "css/extras.css";
 
 /* Se van a ejecutar 
-Especificidad:
-1 -En linea
-2 -Id
-3 -Class
-4 -Etiquetas
+Especificidad(Es el rango de importancia que tendrá en el 
+Html):
+a -En linea
+b -Id
+c -Class
+d -Etiquetas
 */
+
 main > .importante{
     color: rgb(43, 226, 98);
 }

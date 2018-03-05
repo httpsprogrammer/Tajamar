@@ -1,0 +1,63 @@
+body{
+    background :rgb(189, 144, 21);
+}
+
+/* #region menu*/
+header > nav{
+    background: rgb(51, 221, 179);
+    border:  5px solid red;
+    list-style: none;
+    
+}
+ul >li {
+    list-style: none;
+    text-decoration: none;
+}
+/*#endregion menu*/
+
+/* #region titulos*/
+h2{
+    color:red;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
+}
+ h3{
+        color: blue;
+        font-family:  Arial, Helvetica, sans-serif;  
+    }
+
+/* #endregion titulos*/
+
+
+
+/*Lo que va dentro de los corchetes
+son atributos 
+*/
+:hover img{
+    border: 3px solid red;
+}
+main  p{
+    background: paleturquoise;
+}
+
+footer > p{
+    color: fuchsia;
+}
+footer{
+    color: rgb(15, 25, 158);
+    border: 3px solid rgb(48, 52, 107);
+    
+}
+:hover[name="titulo_3"]{
+    color: rgb(50, 187, 84);
+}
+:visited ol{
+    color: orchid;
+}
+ul  ol+ol{
+    color: purple
+}
+
+/*ul  ol ~ ol{
+    color: purple
+}*/

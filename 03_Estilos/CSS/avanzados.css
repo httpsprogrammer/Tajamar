@@ -1,0 +1,15 @@
+/*Diferencia entre hijo y descendiente
+DESCENDIENTE:E descendiente puede ser todos hijo, nieto, es decir,
+todos los que estén dentro de él
+
+HIJO: Afecta solo a la etiqueta de la qué está dentro
+
+
+*/
+
+footer p{
+    color: crimson;
+}
+main p{
+    color: blue;
+}
