@@ -1,0 +1,22 @@
+
+/* Se van a ejecutar 
+Especificidad:
+1 -En linea
+2 -Id
+3 -Class
+4 -Etiquetas
+*/
+main > .importante{
+    color: rgb(43, 226, 98);
+}
+/*Escificidad de esta etiqueta
+Especificidad : (0(En línea),0(en Id),0(En class),0(En etiquetas))
+*/
+h1{
+    color: rgb(255, 0, 0);
+}
+body{
+    color: aqua;
+    background: azure;
+}
+
