@@ -1,0 +1,15 @@
+article p:nth-child(3)
+/*nth-child(num):Indica el hijo tercero  de 'article '*/{
+    color: brown;
+}
+
+p:nth-last-of-type(){
+    /*Cuenta elementos del tipo que 
+    quiere encontrar*/
+    color: azure;
+
+}
+p:nth-last-child(){
+color: aqua;
+}
+

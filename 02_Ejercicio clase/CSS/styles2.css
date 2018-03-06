@@ -13,7 +13,12 @@ article::after{
 content: ("Adiós");
 color: olivedrab;
 }
-
+/*
+section::before{
+    counter-increment: section;
+    content: counter(section);
+}
+*/
 
 
 

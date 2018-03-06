@@ -1,3 +1,13 @@
+*,  
+
+*::before, *::after,  
+
+*:before, *:after {  
+
+box-sizing : border-box; 
+
+} 
+
 body{
     background :rgb(189, 144, 21);
 }
@@ -6,15 +16,27 @@ body{
 header > nav{
     background: rgb(51, 221, 179);
     border:  5px solid red;
-    list-style: none;
-    
+    margin: auto;
+    width: auto;    
 }
-ul >li {
+
+nav > ul li{
+    position: relative;
+   
     list-style: none;
-    text-decoration: none;
+ 
 }
+li,a {
+    margin: 0;
+}
+
+
 /*#endregion menu*/
 
+:root{
+    --colot-base:salmon;
+    --color-texto:maroon;
+}
 /* #region titulos*/
 h2{
     color:red;
