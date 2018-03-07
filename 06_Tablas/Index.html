@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table.t1{
+            empty-cells: hide;
+        border-collapse: collapse;/*collapse: sirver 
+        para decidir que hacer cuando la tabla se colapsa */
+        }
+         table.t1:hover{
+            border-collapse: separate;
+            border-spacing: .7rem;
+        }
+    table.t1 th{
+        padding: 2rem;
+    }
+    table.t1 th{
+
+        text-align: center;
+        padding: 2rem;
+        border: 1px solid;
+
+
+    }
+    table.t2 td
+    table.t2 td{
+
+text-align: center;
+padding: 2rem;
+border: 1px solid;
+
+
+}
+
+
+table.t2 td:nth-of-type(){
+background: cadetblue;
+}
+    </style>
+    <title>Tablas</title>
+</head>
+<body>
+    <h1>Tablas</h1>
+
+<table class="t1" >
+
+    <tr>
+        <th></th>
+        <th scope="col">Examen 1</th>
+        <th scope="col">Examen 2</th>
+        <th scope="col">Examen 3</th>
+    </tr>
+
+    <tr>
+            <th scope="row">Alumno 1</th>
+            <td>Teoría</td>
+            <td>5.6</td>
+            <td>4.5</td>
+     </tr>
+     <tr>
+            <th scope="row">Alumno 1</th>
+            <td>Prácticas</td>
+            <td>3</td>
+            <td>4.5</td>
+     </tr>
+
+     <tr>
+                <th>Alumno 2</th>
+                <td>Teoría</td>
+                <td>5.5</td>
+                <td>6.4</td>
+     </tr>
+     <tr>
+            <th>Alumno 2</th>
+            <td>Práctica</td>
+            <td>5.5</td>
+            <td>6.4</td>
+ </tr>
+     <tr>
+         
+                <th>Alumno 3</th>
+                <td>Teoría</td>
+                <td>5.5</td>
+                <td>5.9</td>
+                    
+      </tr>
+      <tr>
+         
+            <th>Alumno 3</th>
+            <td>Práctica</td>
+            <td>5.5</td>
+            <td>5.9</td>
+                
+  </tr>
+        
+
+
+</table>
+
+<hr>
+
+<table class="t2" >
+
+        <tr>
+            <th colspan="2">Notas frond</th>
+            <td></td>
+            <th scope="row">Examen 1</th>
+            <th  scope="row">Examen 2</th>
+            <th  scope="row">Examen 3</th>
+        </tr>
+    
+        <tr >
+                <th rowspan="1" scope="rowgroup" > Alumno 1</th>
+                <th scopre="row">Teoría</th>
+                <td>5.6</td>
+                <td>4.5</td>
+         </tr>
+         <tr>
+                <th>Alumno 1</th>
+                <td>Prácticas</td>
+                <td>3</td>
+                <td>4.5</td>
+         </tr>
+    
+         <tr >
+                    <th rowspan="2" scope="rowgroup" >Alumno 2</th>
+                    <th scopre="row">Teoría</th>
+                    <td>5.5</td>
+                    <td>6.4</td>
+         </tr>
+         <tr>
+
+                <td>Práctica</td>
+                <td>5.5</td>
+                <td>6.4</td>
+     </tr>
+         <tr>
+             
+                    <th rowspan="3" scope="rowgroup" >Alumno 3</th>
+                    <th scopre="row">Teoría</th>
+                    <td>5.5</td>
+                    <td>5.9</td>
+                        
+          </tr>
+          <tr>
+             
+                <th rowspan="3" scope="rowgroup">Alumno 3</th>
+                <th scopre="row">Práctica</th>
+                <td>5.5</td>
+                <td>5.9</td>
+                    
+      </tr>
+            
+    
+    
+    </table>
+    
+
+
+</body>
+</html>
