@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+*{box-sizing: border-box}
+/*Esto es para que se adapte */
+    .container{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid;
+    }
+
+.container:hover p:nth-of-type(2){
+display: inline-block;
+}
+
+p:nth-last-of-type(2){
+display: none;
+}
+
+    .container::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    p{
+        background-color: blue;
+        width: 20%;
+        padding: 1rem;
+        display: inline-block;
+        overflow: auto;
+        vertical-align: top;
+    }
+p:not(:last-of-type()){
+    margin-right: 6.66%;
+}
+
+p:not(:first-of-type){
+    margin-left: -4px;
+
+}
+
+    </style>
+    <title>static</title>
+</head>
+<body>
+    
+    <div class="container">
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae a eos veniam ex aut doloribus similique et eligendi, repellat recusandae, nulla eaque odit aperiam earum voluptates ad porro qui repellendus?</p>
+<p>Optio repellat perferendis, quia suscipit, nihil molestias necessitatibus quo nisi laborum voluptatem corporis non animi consequuntur voluptatibus eos. Sapiente culpa unde, vel inventore porro ea fuga animi veniam perferendis sed.</p>
+<p>Consequuntur consectetur illo iste pariatur necessitatibus voluptatum itaque fugit id at quia rerum dicta animi, obcaecati laboriosam. Quod molestias necessitatibus, rerum ipsum suscipit sequi dolorum iusto, facere ipsa, odio excepturi.</p>
+<p>Nam quam, minus maxime repellat incidunt asperiores aliquam alias delectus. Dicta neque incidunt qui iusto dolorem exercitationem assumenda! Nesciunt neque quis ducimus perspiciatis tempore est fuga ea illum alias maiores.</p>
+<!--
+<p>Pariatur libero nemo numquam ab molestiae, dolor eligendi sequi recusandae cupiditate, perferendis sit! Sit excepturi sequi in, similique beatae perspiciatis cupiditate nobis quia earum animi quidem quaerat, ipsum veniam explicabo.</p>
+    </div>
+-->
+
+
+</body>
+</html>
