@@ -1,0 +1,133 @@
+ *{
+    box-sizing: border-box;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+/*
+*,  
+
+*::before, *::after,  
+
+*:before, *:after {  
+
+box-sizing : border-box; 
+
+} */
+
+ /*#region ---etiquetas_y_body---*/
+ body{
+    background-image:  url(../imagenes/nieve.jpg); 
+    
+    
+  }
+  
+.container {
+margin-top: 5rem;
+margin-right: 10rem;
+margin-bottom: 5rem;
+margin-left: 10rem;
+background: #44BDEE;
+padding: 2rem;
+min-width: 30rem;
+
+
+/*width: 90%;*/
+
+}
+q{
+quotes: '\00AB' '\00BB' '\201E' '\201C';
+}
+
+article {
+    padding: 2rem;
+}
+
+ /*#endregion ---etiquetas_y_body---*/
+
+
+
+    
+ /*#region ---MENU---*/
+#header{
+background: #2A89CB;
+/*border: .5rem solid #1862B2;*/
+border-radius : .5rem ;
+}
+#la{
+
+    margin: 0;
+}
+
+#boton{
+padding: 0;
+
+}
+
+ /*  #endregion ---MENU--- */
+
+h1{
+    font-size:2rem;  
+    font-family: 'Rammetto One', cursive;
+    color: red;
+    text-align: center;
+    text-shadow: .5rem  .55rem .5rem black;
+    border-radius: 1rem;
+   
+}
+ h2{
+    font-family: 'Oswald', sans-serif;
+    padding: 1rem;
+}
+ .container article  {
+    /*width:  60%;*/
+    margin-left: auto;
+    margin-right: auto;
+   /* box-shadow: -5 ; */
+}
+
+ /*#region ---imagenes---*/
+
+ img.ciudad{
+    width: 100%; 
+    max-width: 30rem;
+    height: 20rem;
+    text-align: center;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 1rem 1rem 1rem   black;
+}
+img.mundial{
+   width: 100%;
+   max-width: 30rem;
+   height: 20rem;
+   border-radius: 2rem;
+   box-shadow: .2rem .5rem .5rem  .5rem black;
+   display: inline-block;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+img.palacio{
+    width: 100%; height: 20rem;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+}
+
+.imagenes{
+    
+}
+
+
+ /*#endregion ---imagenes---*/
+ 
+
