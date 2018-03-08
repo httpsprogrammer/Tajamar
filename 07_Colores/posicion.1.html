@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+        *{box-sizing: border-box;}
+        body{
+            height: 100vh ;
+            /*'vh' Esto significa que quiere que 
+            tenga de alto topdo la pantalla*/
+        }
+
+    .container{
+        width: 90%;
+        margin: 5%;
+        height: 90%;
+        position: relative;
+        /*Esto significa en este caso que va a ser l a
+        posición (0,0) para todo lo que vaya a dentro */
+        background: aqua;
+    }
+    .caja{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: .5;
+    }
+    .caja1{
+        top: 30px ;
+        left: 30px;
+        color: red;
+        background: blue;
+
+
+    }
+    .caja2{
+        top: 20rem;
+        left:  2rem;
+        background: rgb(228, 16, 356);
+        
+color: blue;
+    }
+    .caja2:hover{
+        background: rgba(228, 16, 356);
+
+color: black;
+    }
+
+.caja3{
+    color: rgb(0, 255, 34);
+    top: 200px;
+    left: 200px;
+    background: rgba(76,76,76,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: radial-gradient(ellipse at center, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+}
+.otro{
+    top: 200px;
+    left: 200px;
+    border-radius: 100px 200px 200px 77px;
+-moz-border-radius: 100px 200px 200px 77px;
+-webkit-border-radius: 100px 200px 200px 77px;
+border: 21px solid #ba5fba;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        
+
+<div class="container">
+            <h1>Soy container y tengo posición relative</h1>
+            <div class="caja caja1">Soy de valor absolute </div>
+<div class="caja caja2">
+Soy una caja la caja 2 'absolute' y mi posición es a partir de la primera y soy transparente  funciona con
+'RGBA'
+</div>
+
+<div class="caja caja3"> Caja 3 con gradiente </div>
+
+<div class="otro"></div>
+
+</div>
+
+
+</body>
+</html>

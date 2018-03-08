@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+        *{box-sizing: border-box;}
+        body{
+            height: 100vh ;
+            /*'vh' Esto significa que quiere que 
+            tenga de alto topdo la pantalla*/
+        }
+
+    .container{
+        width: 90%;
+        margin: 5%;
+        height: 90%;
+        position: relative;
+        /*Esto significa en este caso que va a ser l a
+        posición (0,0) para todo lo que vaya a dentro */
+        background: aqua;
+    }
+    .caja{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+    .caja1{
+        top: 30px ;
+        left: 30px;
+        color: red;
+        background: blue;
+
+
+    }
+    .caja2{
+        top: 20rem;
+        left:  2rem;
+        background: rgba(228, 16, 356, .2);
+        
+color: blue;
+    }
+    .caja2:hover{
+        background: rgba(228, 16, 356, .9);
+
+color: black;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container">
+            <h1>Soy container y tengo posición relative</h1>
+            <div class="caja caja1">Soy de valor absolute </div>
+<div class="caja caja2">
+Soy una caja la caja 2 'absolute' y mi posición es a partir de la primera y soy transparente  funciona con
+'RGBA'
+</div>
+
+
+
+    </div>
+
+</body>
+</html>
