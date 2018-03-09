@@ -24,9 +24,22 @@ box-sizing : border-box;
  body{
     background-image:  url(../imagenes/nieve.jpg); 
     
-    
   }
   
+  h1{
+    font-size:2rem;  
+    font-family: 'Rammetto One', cursive;
+    color: red;
+    text-align: center;
+    text-shadow: .5rem  .55rem .5rem black;
+    border-radius: 1rem;
+   
+}
+ h2{
+    font-family: 'Oswald', sans-serif;
+    padding: 1rem;
+}
+
 .container {
 margin-top: 5rem;
 margin-right: 10rem;
@@ -34,7 +47,7 @@ margin-bottom: 5rem;
 margin-left: 10rem;
 background: #44BDEE;
 padding: 2rem;
-min-width: 30rem;
+min-width: 40rem;
 
 
 /*width: 90%;*/
@@ -54,36 +67,31 @@ article {
 
     
  /*#region ---MENU---*/
-#header{
+.header{
 background: #2A89CB;
 /*border: .5rem solid #1862B2;*/
 border-radius : .5rem ;
-}
-#la{
-
-    margin: 0;
+width: 20
 }
 
-#boton{
-padding: 0;
+.button{
+padding: 5%;
+}
 
+.button li{
+display: inline;
+margin: 5%;
+}
+li a{
+    background: #E2EAF8;
+width: 60px;
+padding: 8px 16px;
+border-radius: 1rem;
 }
 
  /*  #endregion ---MENU--- */
 
-h1{
-    font-size:2rem;  
-    font-family: 'Rammetto One', cursive;
-    color: red;
-    text-align: center;
-    text-shadow: .5rem  .55rem .5rem black;
-    border-radius: 1rem;
-   
-}
- h2{
-    font-family: 'Oswald', sans-serif;
-    padding: 1rem;
-}
+
  .container article  {
     /*width:  60%;*/
     margin-left: auto;
@@ -123,11 +131,18 @@ img.palacio{
     border-radius: 2rem;
 }
 
-.imagenes{
-    
+.fig{
+margin-left: 25%;
+margin-right: 25%;
+margin-bottom:3%;
 }
-
 
  /*#endregion ---imagenes---*/
  
-
+ /*region --videos--*/
+#video_rusia{
+    width: 100%;
+    
+    
+}
+ /*endregion --videos--*/
