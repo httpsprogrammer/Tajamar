@@ -1,0 +1,16 @@
+
+*{
+    box-sizing: border-box;
+}
+.header{
+    background: red;
+
+}
+.button{
+    padding: 0;
+
+}
+.button li{
+display: inline;
+margin: 5%;
+}
