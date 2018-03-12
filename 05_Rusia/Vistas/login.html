@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/formulario.css">
+ 
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <header class="header">
+            <nav>
+                <ul class="button">
+                    <li>
+                        <a href="../Vistas/Index.html">Home
+                            <i class="fas fa-home"></i>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Vistas/Poblacion.html">Población</a>
+                    </li>
+                    <li>
+                        <a href="../Vistas/Rusia.html">Rusia</a>
+                    </li>
+                    <li>
+                        <a href="../Vistas/videos_rusia.html">Vídeos</a>
+                    </li>
+                    <li>
+                        <a href="../Vistas/Historia.html">Historia</a>
+                    </li>
+                    <li>
+                            <a href="./registrar.html">Registrarse</a>
+                        </li>
+                    <li>
+                        <a href="./login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Ingresa</h1>
+
+        <main>
+
+            <form action="" method="Post">
+                <fieldset>
+                    <legend>
+                        Datos Personales
+                    </legend>
+                    <div class="contol-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="Nombre" id="nombre" placeholder="Escribe tu nombre" maxlength="10" required>
+                    </div>
+                    <div class="contol-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido">
+                    </div>
+
+                    <br>
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Datos Académicos
+                    </legend>
+                    <div class="contol-group">
+                        <label for="curso">Escribe tu curso</label>
+                        <input type="text" name="curso" id="curso" value="1ºD" disabled="disabled">
+                    </div>
+                    <div class="contol-group">
+                        <label for="email">Escribe tu email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="contol-group">
+                        <label for="curso">Escribe tu contraseña</label>
+                        <input type="password" name="curso" id="curso">
+                    </div>
+                </fieldset>
+            <!--     <fieldset>
+                    <legend>Otros datos</legend>
+                    <textarea name="datos" id="" cols="30" rows="10"></textarea>
+                </fieldset> -->
+<label for="comenta"></label>
+                <label for="comentario">Comentarios</label>
+                <input type="submit" value="Enviar">
+
+            </form>
+        </main>
+
+
+    </div>
+
+
+</body>
+
+</html>

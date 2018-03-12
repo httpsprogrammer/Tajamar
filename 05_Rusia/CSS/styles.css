@@ -83,14 +83,17 @@ overflow: hidden;
 
 .button li{
 display: inline;
-margin: 5%;
-
+margin: 1%;
 }
 li a{
     background: #E2EAF8;
 width: 60px;
 padding: 8px 16px;
 border-radius: 1rem;
+}
+li a:hover{
+    background: red;
+
 }
 
  /*  #endregion ---MENU--- */
