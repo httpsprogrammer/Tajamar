@@ -1,0 +1,93 @@
+*,
+*::after,*::before,
+*::after,*::before{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+}
+/*#region FULLMENU*/
+
+main{
+    min-height: 80vh;
+
+}
+nav{
+    margin-bottom: 1rem;
+}
+nav ul{
+        /*'list-style-type:' si se escoge  */ 
+    list-style:  none;
+margin:0 ;
+padding:0 ;
+}
+nav a{
+    text-decoration: none;
+color:black;
+
+}
+
+/*#region menu1*/
+
+    /*Menú 1 basado en inline-block*/
+nav.menu1 li{
+    display: inline-block;
+    border-right:solid gray;
+}
+nav.menu1 li:first-of-type{
+border-left:solid gray ;
+}
+nav.menu1 a{
+    padding: 3rem;
+    
+    }
+/*#endregion menu1*/
+
+
+/*#region menu2*/
+
+nav.menu2 {
+    background-color: red;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+nav.menu2 ul{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav.menu2 li{
+    width: 20%;
+    float: left;
+}
+nav.menu2 a{
+    padding: 1rem 2rem; 
+    }
+    
+    nav.menu2 a{
+        display: block;
+        padding: 1rem 1rem;
+        text-align: center;
+        border-right: solid grey;
+        white-space: nowrap;
+    }
+
+    nav.menu2 a:hover{
+    background: greenyellow;
+    }
+/*#endregion menu2*/
+
+
+
+
+
+/*#endregion FULLMENU*/
+
+/*#region menualex*/
+
+/*#endregion menualex*/
