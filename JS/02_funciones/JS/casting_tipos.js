@@ -1,6 +1,7 @@
+let x //Esta 'x' sería local a la función 'main()'
+/*Con 'let ' */
+/*Las partes de un 'objeto ' se llaman propiedades */
 function main(){
-
-
 
     let num1= 23
     let num2="20"
@@ -10,6 +11,7 @@ function main(){
     console.log(typeof r)
     console.log(typeof num2)
     
+    /*Se puede hacer casting de distintas formas con 'Numb' , +  */
     /* El '+ +' debe ir separado para poder sumar entre 
     números que estén definidos como string*/ 
     r= num1 + +  num2 //43

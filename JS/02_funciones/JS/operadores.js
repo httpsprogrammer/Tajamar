@@ -1,3 +1,6 @@
+import { exists } from "fs";
+import { type } from "os";
+
 /*Es una expresión de asignación */
 let x=25
 //instruccion -> side effect
@@ -53,9 +56,18 @@ let edad = 45
 console.log(edad > 30)
 console.log(edad > 30? 'Buenos días':'Hola chaval')// Esto es como un 'if' simplificado de una sola línea
 
+{
+    let a={valor :5}
+    if ( isNaN(d)   && d.valor === 5) {
+        console.log("no");
+}else{
+    console.log("si")
+}
 
-
-
+}
+/**
+ * 
+ */
 
 
 

@@ -68,5 +68,6 @@ let error = new Error()
 Math
 /*'JSON.' Para saber lo que se puede usar en JSON  */
 JSON
+/*Los 'arrays' se crean apartir de corchetes'[]'  y los objetos apartir de '{}'*/
 
 
