@@ -30,6 +30,7 @@ function calcularParEnteros(n){
     return isNaN(n/2)? -1: n%2
     return r
 } 
+
 function calcularPar(n){
     return isNaN(n/2)? -1: n%2
     if (parseInt(n) != parseFloat(n)) {
@@ -38,7 +39,7 @@ function calcularPar(n){
         r= n%2
     }
     return r
-} 
+}
 
 function mostrarEsPar(n){
     const aMensajer=[
@@ -52,7 +53,6 @@ function mostrarEsPar(n){
                const r=calcularPar(n)
                 let  r= (r===-1)?2 : r
 console.log(aMensajer[r])
-
 }
 
 
