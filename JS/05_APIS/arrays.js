@@ -2,6 +2,11 @@
 let x = "Pepe"
 /*Cuando le escribimos el toUppercase acabamos de hacer una 
 de x */
+
+aLetrasOriginal = aLetras.slice(0,aLetras.length)
+aLetras.sort()//mutable
+console.log('Copia no sort: ', aLetrasOriginal)
+
 x=x.toUpperCase()
 let aDatos=[1,56,21] 
 //Math no se INSTANCIA  
