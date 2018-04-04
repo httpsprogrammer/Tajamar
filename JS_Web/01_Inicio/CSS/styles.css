@@ -1,0 +1,29 @@
+*, *::after, ::before, *, *::after, *:before{
+    box-sizing: border-box;
+}
+body
+{
+    background: aqua;
+    margin: 4%;
+}
+main{
+min-height: 60vh ;
+}
+
+main button{
+color :blue;
+}
+
+
+main div{
+border-radius: 2px,red;
+margin-top: 2rem;
+margin-bottom: 2rem;
+padding:1rem;
+
+}
+
+main div{
+    border: 1px solid blue;
+    width: 50%;    
+}
