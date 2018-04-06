@@ -1,0 +1,29 @@
+*, *::after, ::before, *, *::after, *:before{
+    box-sizing: border-box;
+}
+body
+{
+    background: aqua;
+    margin: 4%;
+    min-height: 60vh ;
+}
+main{
+min-height: 60vh ;
+}
+
+main button{
+    color :blue;
+    }
+    span{
+      Color : red;
+    }
+
+#ocultar{
+    display:none;
+}
+.aparecer{
+
+ display:inline;  
+
+}    
+
