@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+    <main>
+        <button type="button" id="btnPulsar" >Pulsar</button>
+        <button type="button" id="btnPulsarM" >Pulsar</button>
+<a href="htttps://www.google.com" id="abtnPulsarM">Pulsar moderno</a>
+    
+</main>
+
+<script >
+
+//DOM-Level 1 Aquí recogemos un atributo y le cambiamos el valor que tenga  
+document.querySelector('#btnPulsar').onclick="btnPulsar"
+//DOM-Level 2 Esto es un 'handler' o manejador de eventos
+document.querySelector('#btnPulsarM').addEventListener('click',btnPulsarM)// Esto es un 'Listener' de eventos
+
+/*Hitting: Significa que todas las funciones que se declaran las sube al principio
+y será una de las primeras cosas que carguen  */
+function btnPulsar  () { //<--Esto sería un 'hitting'
+     let s='Hola soy handler'
+ alert(s)
+ 
+ }
+
+ function btnPulsarM(ev) {
+     ev.preventDefault()
+    let s='Hola soy '
+ alert(s)
+ }
+
+
+</script>
+</body>
+
+</html>
