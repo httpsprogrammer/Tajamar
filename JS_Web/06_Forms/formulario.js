@@ -2,16 +2,16 @@ export class Formulario {
     constructor() {
         this.datos = {
             nombre: '',
-            apellido: '',
+            apellido: '', 
             email: '',
-            passwd: '',
+            passwd: '', 
             datos: '',
             isOk: false,
             isOk2: false,
             turno: '',
             curso: {}
         }
-        this.accederDom()
+        this.accederDom()   
         this.definirManejadores()
     }
 
@@ -24,18 +24,13 @@ export class Formulario {
         this.domInpEmail = document.querySelector('#email')
         this.domInpPasswd = document.querySelector('#passwd')
         this.domAreaDatos = document.querySelector('#datos')
-        this.domRadioTurno = document.querySelectorAll('[name="turno"]')
+        this.domRadioTurno = document.querySelectorAll('[name="turno"]') 
         // this.domRadioTurno = document.getElementsByName(turno)
         this.domCbxIsOk = document.querySelector('#isOk')
         this.domCbxIsOk2 = document.querySelector('#isOk2')
         this.domSelectCurso = document.querySelector('#curso')
         this.domDivResultados = document.querySelector('#resultados')
         this.domFieldAcedemic = document.querySelector('#acedemic')
-        this.domopDF = document.querySelector('#opDF')
-        this.domopDW = document.querySelector('#opDW')
-        this.domopServer = document.querySelector('#opServer')
-        this.domopDB = document.querySelector('#opDB')
-
     }
 
     definirManejadores() {
@@ -43,10 +38,6 @@ export class Formulario {
         this.domBtnEnviar.addEventListener('click', this.enviar.bind(this))
         this.domBtnBorrar.addEventListener('click', this.borrar.bind(this))
         this.domCbxIsOk.addEventListener('change', this.completar.bind(this))
-        this.domopDF.addEventListener('click', this._opDF.bind(this))
-        this.domopDW.addEventListener('click', this.bind(this))
-        this.domopServer.addEventListener('click', this.bind(this))
-        this.domopDB.addEventListener('click', this.bind(this))
     }
 
     saludar() {
@@ -59,7 +50,7 @@ export class Formulario {
         this.presentarDatos()
     }
 
-    borrar() {
+    borrar () {
     }
 
     completar() {
@@ -67,7 +58,7 @@ export class Formulario {
         this.domFieldAcedemic.classList.toggle('ocultar')
         if (this.domFieldAcedemic.classList.contains('ocultar')) {
             this.domRadioTurno[0].checked = true
-            this.domSelectCurso.selectedIndex = 0
+            this.domSelectCurso.selectedIndex=0 
         }
     }
 
@@ -75,18 +66,17 @@ export class Formulario {
         this.datos.nombre = this.domInpNombre.value
         this.datos.apellido = this.domInpApellido.value
         this.datos.email = this.domInpEmail.value
-        this.datos.passwd = this.domInpPasswd.value
-        this.datos.datos = this.domAreaDatos.value
-        this.datos.turno = this.procesarRadio(this.domRadioTurno)
+        this.datos.passwd =  this.domInpPasswd.value
+        this.datos.datos =  this.domAreaDatos.value
+        this.datos.turno = this.procesarRadio(this.domRadioTurno)  
         this.datos.isOk = this.domCbxIsOk.checked
         this.datos.isOk2 = this.domCbxIsOk2.checked
         this.datos.curso = this.procesarSelect(this.domSelectCurso)
-        this.datos.desarrollo = this.procesarSelect(this.domopDF)
     }
 
     procesarRadio(nodo) {
         let value
-        nodo.forEach((item) => {
+        nodo.forEach( (item ) => {
             if (item.checked) {
                 value = item.value
             }
@@ -97,14 +87,14 @@ export class Formulario {
     procesarSelect(nodo) {
         let index = nodo.selectedIndex
         return {
-            code: nodo.options[index].value,
+            code: nodo.options[index].value, 
             text: nodo.options[index].textContent
-        }
+        }    
     }
 
     presentarDatos() {
-        let resultadoHTML =
-            `<h2>Resultados</h2>
+        let resultadoHTML = 
+        `<h2>Resultados</h2>
         <ul>
             <li>Nombre: ${this.datos.nombre}</li>
             <li>Apellido: ${this.datos.apellido}</li>
@@ -119,21 +109,7 @@ export class Formulario {
         `
         this.domDivResultados.innerHTML = resultadoHTML
 
-
     }
 
-    _opDF(){
-        let resultadoHTML = 
-        `<h2>Desarrollo Fron</h2>
-        <ul>
-        <li>Js</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        </ul>
-        `
-    }
-
-
-
+   
 }
