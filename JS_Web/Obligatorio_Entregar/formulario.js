@@ -4,43 +4,33 @@ export class Formulario {
 
     constructor() {
         this.datos = {}
-       // this.selectCurso = document.querySelector('#curso')
-      this.radioCurso = document.querySelectorAll([name='curso'])
+      this.radioCurso = document.querySelectorAll('[name="curso"]')
         document.querySelector('#formulario').
             addEventListener('submit', this.enviar.bind(this), false)
 
         this.crearfecha()
-        //'change' para saber cuando ha cambiado de materia 
        this.radioCurso.forEach(item =>{
-           item.addEventListener('checked',this.selecTopics.bind(this))
+           item.addEventListener('change',this.selecTopics.bind(this))
        })
-        //this.selectCurso.addEventListener('change', this.selecTopics.bind(this))
     }
 
 
     selecTopics() {
-        console.log('asdf')
-        let i
+      
+        let aTopics = CURSOS[i].asignaturas
+        this.mostrarTopics(aTopics)
+    }
+
+    checkRadio(aRadio){
+        console.log('Estoy en select')
+        let i =this.checkRadio(this.radioCurso)
         for (i = 0; i <  this.radioCurso.length; i++) {
             if(this.radioCurso[i].checked){
                 
                 break;
             } 
-            
         }
-
-        this.radioCurso.forEach(item =>{
-            item.checked
-        })
-        
-   
-        
-        /*//'selectIndex' para recoger el puntero
-        let i = this.selectCurso.selectIndex
-        // Llamamos a nuetros array
-        let aTopics = CURSOS[i].asignaturas
-        this.mostrarTopics(aTopics)*/
-
+        return i
 
     }
 
@@ -60,6 +50,20 @@ export class Formulario {
         console.log(ev)
 document.querySelector('#resultados')
 this.mostrarDatos()
+    }
+    mostrarDatos(){
+        let tempalte = 
+         `<li>email: ${this.datos.email} </li> 
+         <li></li> 
+         <li></li> 
+         <li></li> 
+         <li></li> 
+         <li></li> 
+         <li></li> 
+         <li></li> 
+         `
+
+
     }
 
     recogerDatos() {

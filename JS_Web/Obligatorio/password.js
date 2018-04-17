@@ -18,7 +18,6 @@ function main() {	//envio de evento a la funcion manejadora.
     }; // fin de la función comprobar()
 
     function comprobar(oEvento) {
-        console.log("Funcion comprobar")
         // funcion manejadorea del evento submit:
         // solo se llega aqui si las contraseñas son válidas
         let validado = true;
