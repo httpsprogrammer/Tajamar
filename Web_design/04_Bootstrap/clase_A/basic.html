@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <!--Siempre irán primero las librerias internas primero y por último nuestros archivos-->
+    <link rel="stylesheet" href="../basic.css">
+</head>
+
+<body>
+
+ 
+        <div class="row">
+
+            <header class="col column">
+                <h1 class="border border-primary rounded progress-bar progress-bar-striped progress-bar-animated"> Probando Bootstrap</h1>
+            </header>
+        </div>
+
+        <div class=" row">
+            <!--El número '3' me indica el las columnas de ancho
+            el 'sm' es una media query creada por bootstrap para, cuando la ppágina tenga una magnitud de  
+            -->
+            <article class="col-12  col-sm-5 col-md-4 col-lg6  col-xl-4">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad molestiae consectetur ducimus hic minima optio
+                    sint? Rerum earum exercitationem cupiditate quasi voluptatem temporibus provident? Accusamus repudiandae
+                    ipsa commodi assumenda cupiditate.</p>
+            </article>
+            <!--Cuando tenga todo el ancho de la pantalla tendrán una anchura de 12col  cundo tenga el ancho de 'sm' de 5col nos cambiará eñ ancho de las columnas  y cuando tenga el ancho de 'md'que es el mediano tendrá el tamaño de 4 col -->
+            <article class=" col-12  col-sm-5 col-md-4 col-lg6">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad molestiae consectetur ducimus hic minima optio
+                    sint? Rerum earum exercitationem cupiditate quasi voluptatem temporibus provident? Accusamus repudiandae
+                    ipsa commodi assumenda cupiditate.</p>
+            </article>
+            <article class="col-12  col-sm-5 col-md-4 col-lg6 ">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad molestiae consectetur ducimus hic minima optio
+                    sint? Rerum earum exercitationem cupiditate quasi voluptatem temporibus provident? Accusamus repudiandae
+                    ipsa commodi assumenda cupiditate.</p>
+            </article>
+
+            <div class="form-group">
+                <label for="">Dentro de la columna</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Min-4 Max-20</small>
+            </div>
+
+
+        </div>
+        <div class="btn-group " role="group" aria-label="">
+            <button type="button" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link">1</button>
+            <button type="button" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link">2</button>
+            <button type="button" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link">3</button>
+        </div>
+
+        <div class="form-group">
+            <label for="">Es esta en la fila</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId">
+            <small id="helpId" class="text-muted">Min-4 Max-20</small>
+        </div>
+    </div>
+    <!--'b4-table' -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>titulo</th>
+                <th>titulo</th>
+                <th>titulo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">lo que </td>
+                <td>lo que </td>
+                <td>lo que </td>
+            </tr>
+            <tr>
+                <td scope="row">lo que </td>
+                <td>lo que </td>
+                <td>lo que </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse table-responsive">
+        <thead class="thead-inverse|thead-default">
+            <tr>
+                <th></th>
+                <th>na</th>
+                <th>as</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">as</td>
+                <td>la</td>
+                <td>la</td>
+            </tr>
+            <tr>
+                <td scope="row"></td>
+                <td>s</td>
+                <td>sa</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#contentId" aria-expanded="false" aria-controls="contentId">
+            OK
+        </button>
+    </p>
+    <div class="collapse" id="contentId">
+
+    </div>
+</body>
+
+</html>
