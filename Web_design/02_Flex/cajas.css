@@ -1,0 +1,34 @@
+main{
+display: flex;
+height: 100vh;
+    background: rgb(128, 143, 190);
+    /*Me alinea los textos uno al lado del otro va a tener 
+    un comportamiento block  */
+    display: flex;
+    /*Se colocan de izq-derecha*/
+   /* justify-content: flex-start;
+        /*Se colocan de dere-izq*/
+    justify-content: flex-end;
+    /*Se reparte en todo el entorno sin */
+    justify-content: space-around;
+
+    /*Centra todo los items*/
+    align-items: center;
+    /*
+    align-items: stretch;*/
+    flex-direction: column;
+
+    padding: 2%;
+
+}       
+
+div {
+    font-size: 5rem;
+    padding: 1rem;
+    background-color: salmon;
+    border: 1px solid seashell;
+}
+
+div:nth-of-type(3) {
+    font-size: 6rem;
+}
