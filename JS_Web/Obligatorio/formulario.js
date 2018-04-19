@@ -1,78 +1,80 @@
 import { CURSOS } from './cursos.js'
 
 export class Formulario {
-
     constructor() {
-        this.datos = {}
-       // this.selectCurso = document.querySelector('#curso')
-      this.radioCurso = document.querySelectorAll([name='curso'])
-        document.querySelector('#formulario').
-            addEventListener('submit', this.enviar.bind(this), false)
-
         this.crearfecha()
-        //'change' para saber cuando ha cambiado de materia 
-       this.radioCurso.forEach(item =>{
-           item.addEventListener('checked',this.selecTopics.bind(this))
-       })
-        //this.selectCurso.addEventListener('change', this.selecTopics.bind(this))
-    }
-
-
-    selecTopics() {
-        console.log('asdf')
-        let i
-        for (i = 0; i <  this.radioCurso.length; i++) {
-            if(this.radioCurso[i].checked){
-                
-                break;
-            } 
-            
+        //Aquí se crea un 'array de objetos' donde se van a guardar los datos que queremos que se muestren 
+        this.datos = {
+            nombre: '',
+            apellido: '',
+            apellido2: '',
+            nacimiento: '',
+            correo: '',
+            password: '', 
+            password2: '',
+            datos: '',
+            Correcto: false,
+            Correcto2: false,
+            Opciones: '',
+            Opciones2: '',
+            Opciones3: '',
+            curso: {},
+            asignaturas: []
         }
-
-        this.radioCurso.forEach(item =>{
-            item.checked
-        })
+        this.isLeido = false
+        //Se cargan los datos de accederDom 
+        this.accederDom()   
+        this.definirManejadores()
         
-   
-        
-        /*//'selectIndex' para recoger el puntero
-        let i = this.selectCurso.selectIndex
-        // Llamamos a nuetros array
-        let aTopics = CURSOS[i].asignaturas
-        this.mostrarTopics(aTopics)*/
-
-
     }
 
-    mostrarTopics(ev) {
+    accederDom() {
+        this.domFormulario = document.querySelector('#form1')
+        this.domInpNombre = document.querySelector('#nombre')
+        this.domInpApellido = document.querySelector('#apellido')
+        this.domInpApellido2 = document.querySelector('#apellido2')
+        this.domInpFecha = document.querySelector('#fecha')
+        this.domInpcorreo = document.querySelector('#correo')
+        this.domInppassword = document.querySelector('#password')
+        this.domInppassword2 = document.querySelector('#password2')
+        this.domAreaDatos = document.querySelector('#datos')
+        this.domRadioOpciones = document.querySelectorAll('[name="Opciones"]') 
+        this.domRadioOpciones2 = document.querySelectorAll('[name="Opciones2"]')
+        this.domRadioOpciones3 = document.querySelectorAll('[name="Opciones3"]')
         
-        let template = ''
-        //Aquí vamos a recorrer nuestrar materias para poder visualizarlas
-        aTopics.forEach(item => {
-            template +=
-                `<option>${item}</option>`
-        })
-        document.querySelector('#mostrar_Cursos').innerHTML = template
-
+        this.domCbxCorrecto = document.querySelector('#Correcto')
+        this.domCbxCorrecto2 = document.querySelector('#Correcto2')
+        this.domSelectCurso = document.querySelector('#curso')
+        this.domSelectTopics = document.querySelector('#topics')
+        this.domDivTopics = document.querySelector('#div_topics')
+        this.domDivResultados = document.querySelector('#resultados')
+        this.domFieldAcedemic = document.querySelector('#acedemic')
+        this.domBorrar= document.querySelector ('#btnBorrar') 
     }
+
+
+    definirManejadores() {
+        this.domFormulario.addEventListener('submit', this.enviar.bind(this))
+        this.domSelectCurso.addEventListener('change', this.presentarAsignaturas.bind(this))
+    this.domBorrar.addEventListener('click',this.borraDatos.bind(this))
+    }
+borraDatos(){
+    let template = ''
+    this.domDivTopics = ''
+
+}
 
     enviar(ev) {
         console.log(ev)
-document.querySelector('#resultados')
-this.mostrarDatos()
-    }
-
-    recogerDatos() {
-        this.datos.email.document.querySelector('#email').value
-        //El 'i' me indica la posición de cada opción
-        let i = this.selectCurso.selectIndex
-        this.datos.Curso = this.selectCurso.options[i].textContent
-        console.dir(this.selectCurso)
-
+        this.recogerDatos()
+        this.presentarDatos()
+        if (!this.isLeido) {
+            ev.preventDefault()
+        }
     }
 
     
-    crearfecha() {
+   crearfecha() {
 
         const meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agoste', 'Septiembre')
         const diasemana = new Array('Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado')
@@ -86,4 +88,74 @@ this.mostrarDatos()
 
     }
 
+    recogerDatos() {
+        this.datos.nombre = this.domInpNombre.value
+        this.datos.apellido = this.domInpApellido.value
+        this.datos.apellido2 = this.domInpApellido2.value
+        this.datos.nacimiento = new Date(this.domInpFecha.value)
+        this.datos.correo = this.domInpcorreo.value
+        this.datos.password =  this.domInppassword.value
+        this.datos.password2 =  this.domInppassword2.value
+        this.datos.datos =  this.domAreaDatos.value
+        this.datos.Opciones = this.procesarRadio(this.domRadioOpciones)  
+        this.datos.Opciones2 = this.procesarRadio(this.domRadioOpciones2)
+        this.datos.Opciones3 = this.procesarRadio(this.domRadioOpciones3)
+        this.datos.Correcto = this.domCbxCorrecto.checked
+        this.datos.Correcto2 = this.domCbxCorrecto2.checked
+        this.datos.curso = this.procesarSelect(this.domSelectCurso)
+    }
+
+    procesarRadio(nodo) {
+        let value
+        nodo.forEach( (item ) => {
+            if (item.checked) {
+                value = item.value
+            }
+        })
+        return value 
+    }
+
+    procesarSelect(nodo) {
+        let index = nodo.selectedIndex
+        return {
+            code: nodo.options[index].value, 
+            text: nodo.options[index].textContent
+        }    
+    }
+
+    presentarAsignaturas(ev) {
+        ev.target.firstElementChild.classList.add('ocultar')
+        let topics = CURSOS[ev.target.selectedIndex-1].asignaturas
+        let HTMLResult = ''
+        topics.forEach( elem => HTMLResult +=`<option>${elem}</option>` )
+        this.domDivTopics.classList.remove('ocultar')
+        this.domSelectTopics.innerHTML = HTMLResult
+    }
+
+    presentarDatos() {
+        let resultadoHTML = 
+        `<h2>Resultados</h2>
+        <ul>
+            <li>Nombre: ${this.datos.nombre}</li>
+            <li>Apellido: ${this.datos.apellido}</li>
+            <li>Apellido2: ${this.datos.apellido2}</li>
+            <li>Fecha nacimiento: ${this.datos.nacimiento}</li>
+            <li>correo: ${this.datos.correo}</li>
+            <li>password: ${this.datos.password}</li>
+            <li>password2: ${this.datos.password2}</li>
+            <li>Datos extra: ${this.datos.datos}</li>
+            <li>Condiciones marcadas: ${this.datos.Correcto ? 'Si' : 'No'}</li>
+            <li>Condiciones marcadas 2: ${this.datos.Correcto2 ? 'Si' : 'No'}</li>
+            <li>Opciones: ${this.datos.Opciones}</li>
+            <li>Opciones2: ${this.datos.Opciones2}</li>
+            <li>Opciones3: ${this.datos.Opciones3}</li>
+            <li>Curso: ${this.datos.curso.text}</li>
+        </ul>
+        `
+        this.domDivResultados.innerHTML = resultadoHTML
+        console.dir(this.datos)
+
+    }
+
+   
 }

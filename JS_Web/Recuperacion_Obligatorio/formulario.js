@@ -3,6 +3,7 @@ import { CURSOS } from './cursos.js'
 export class Formulario {
     constructor() {
         this.crearfecha()
+        //Aquí se crea un 'array de objetos' donde se van a guardar los datos que queremos que se muestren 
         this.datos = {
             nombre: '',
             apellido: '',
@@ -21,6 +22,7 @@ export class Formulario {
             asignaturas: []
         }
         this.isLeido = false
+        //Se cargan los datos de accederDom 
         this.accederDom()   
         this.definirManejadores()
         
@@ -28,7 +30,6 @@ export class Formulario {
 
     accederDom() {
         this.domFormulario = document.querySelector('#form1')
-        this.domBtnSaludar = document.querySelector('#btnSaludar')
         this.domInpNombre = document.querySelector('#nombre')
         this.domInpApellido = document.querySelector('#apellido')
         this.domInpApellido2 = document.querySelector('#apellido2')
@@ -48,13 +49,20 @@ export class Formulario {
         this.domDivTopics = document.querySelector('#div_topics')
         this.domDivResultados = document.querySelector('#resultados')
         this.domFieldAcedemic = document.querySelector('#acedemic')
+        this.domBorrar= document.querySelector ('#btnBorrar') 
     }
+
 
     definirManejadores() {
         this.domFormulario.addEventListener('submit', this.enviar.bind(this))
         this.domSelectCurso.addEventListener('change', this.presentarAsignaturas.bind(this))
+    this.domBorrar.addEventListener('click',this.borraDatos.bind(this))
     }
+borraDatos(){
+    let template = ''
+    this.domDivTopics = ''
 
+}
 
     enviar(ev) {
         console.log(ev)
