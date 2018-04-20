@@ -1,0 +1,121 @@
+/*#region Etiquetas*/
+
+body{
+    background-image: url("./Imagenes/fondo.jpg");
+}
+h1{
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Do Hyeon', sans-serif;
+font-family: 'Jua', sans-serif;
+}
+h2{
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Do Hyeon', sans-serif;
+font-family: 'Jua', sans-serif;
+}
+p{
+    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Gamja Flower', cursive;
+    font-family: 'Roboto Slab', serif;
+}
+/*#endregion */
+
+/*#region Clases*/
+
+.menu1{
+    display: flex;
+   flex: content;  
+}
+
+.container{
+    background: #DCA136;
+    border-radius: 4px 4px 4px;
+    padding: 2%;
+}
+
+.tamaño{
+max-width:  70%;
+margin-bottom: 2rem; 
+display: flex;
+margin:10px auto;
+display:block;
+}
+.img{
+    min-height:10rem;
+    max-height:10rem;  
+}
+.box{
+    max-width: 50%;
+    max-height: 50%;
+}
+.pie{
+    padding: 2%;
+    background-image: url("./Imagenes/fondo.jpg");
+    border-radius: 1px;
+    text-align: center;
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Do Hyeon', sans-serif;
+font-family: 'Jua', sans-serif;
+font-size: 4rem;
+
+}
+.info_ex{
+    padding: 2%;
+    font-weight: normal;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+/*#endregion */
+
+
+/*#region media*/
+@media (max-width: 1920px ) {
+    .menu2{
+        display: none;
+    }
+ 
+}
+/* TABLET*/
+@media (max-width: 768px ) {
+.menu2{
+    display: inline-block;
+}
+.menu1{
+    display: none;
+}
+.tablet{
+    display: none;
+    }
+    .tamaño{
+        display: none; 
+    }
+    /*Mi main es el container*/
+.container{
+    width: 100%;
+}
+.info_ex{
+    width: 100%;
+}
+    
+}
+
+/* MOBIL*/
+@media (max-width: 480px ) {
+    .art1{
+margin-right: 20%;
+    }
+.mobil{
+   
+    margin:0; 
+}
+.menu2{
+    margin-left: 1rem; 
+}
+}
+
+/*#endregion */
+

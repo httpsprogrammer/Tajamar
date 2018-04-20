@@ -14,7 +14,6 @@
     min-height: 60vh
 }
 
-
 .columnas_2 {
     -webkit-column-count: 2;
             column-count: 2;
@@ -52,7 +51,6 @@
 .lado_dcha {
     width: 20%;
 }
-
 
 
 
